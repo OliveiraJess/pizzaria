@@ -1,14 +1,21 @@
 pizzaJson.map((item, index) => {
   // console.log(pizza)
 
-  let pizzaItem = document.querySelector(".models .pizza-item").cloneNode(true)
+  let pizzaItem = document.querySelector(".models .pizza-item").cloneNode(true);
 
   // console.log(pizzaItem)
 
-  document.querySelector(".pizza-area").append(pizzaItem)
+  document.querySelector(".pizza-area").append(pizzaItem);
 
-  pizzaItem.querySelector(".pizza-item--img img").src = item.img
-  pizzaItem.querySelector(".pizza-item--price").innerHTML = `R$ ${item.price.toFixed(2)}`
-  pizzaItem.querySelector(".pizza-item--name").innerHTML = item.name
-  pizzaItem.querySelector(".pizza-item--desc").innerHTML = item.description
+  pizzaItem.querySelector(".pizza-item--img img").src = item.img;
+  pizzaItem.querySelector(".pizza-item--price").innerHTML = `R$ ${item.price.toFixed(2)}`;
+  pizzaItem.querySelector(".pizza-item--name").innerHTML = item.name;
+  pizzaItem.querySelector(".pizza-item--desc").innerHTML = item.description;
+
+  pizzaItem.querySelector(".pizza-item a").addEventListener('click', (event) => {
+    event.preventDefault();
+    // console.log("clicou na pizza")
+
+    document.querySelector(".pizzaWindowArea").style.display = 'flex';
+  })
 })
