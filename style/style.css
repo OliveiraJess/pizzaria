@@ -25,9 +25,7 @@ header {
   height: 60px;
   background-color: #d32f2f;
   display: flex;
-  /* none; */
   justify-content: space-between;
-  /* flex-end; */
   align-items: center;
 }
 
@@ -69,6 +67,7 @@ aside.show {
 }
 
 .cart--area {
+  margin-top: 30px;
   padding: 20px;
 }
 
@@ -424,11 +423,6 @@ h2 {
     display: flex;
   }
 
-  /*
-    main {
-        padding-top:60px;
-    }
-    */
   aside {
     width: auto;
     position: fixed;
